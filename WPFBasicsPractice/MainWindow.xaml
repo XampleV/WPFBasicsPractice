@@ -64,7 +64,7 @@
             <TextBox Margin="0 5 225 0" Padding="10"/>
             <!-- Submit Section -->
 
-            <Button Content="Submit"  FontSize="25" Margin="0 50 0 0" FontWeight="Bold" Foreground="#66ff00" Background="Black" BorderThickness="0"></Button>
+            <Button Content="Submit" Click="SubmitClickFunction" FontSize="25" Margin="0 50 0 0" FontWeight="Bold" Foreground="#66ff00" Background="Black" BorderThickness="0"></Button>
 
         </StackPanel>
     </Border>

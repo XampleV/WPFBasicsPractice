@@ -24,5 +24,12 @@ namespace WPFBasicsPractice
         {
             InitializeComponent();
         }
+
+        private void SubmitClickFunction(object sender, RoutedEventArgs e)
+        {
+            // now we can execute functions
+            MessageBox.Show(
+                "Successfully submitted the user.", "Title goes at the end");
+        }
     }
 }
