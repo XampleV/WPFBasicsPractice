@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFBasicsPractice"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="400">
+        Title="C# Testing" Height="450" Width="400">
     <Border Padding="10">
     <StackPanel>
         <Grid>
@@ -19,6 +19,18 @@
             <Button  Grid.Column="1"  Content="Reset"/>
             <Button Margin="10 0 0 0" Grid.Column="2"  Content="Refresh"/>
         </Grid>
-    </StackPanel>
+            <TextBlock Grid.Column="0" Margin ="0 10 0 0" FontWeight="Bold" FontSize="15" Foreground="Black" Text="Small Header" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+            
+                <TextBlock Grid.Column="0" Margin ="0 10 0 0" Text="Full Name" />
+                <TextBlock Grid.Column="1" Margin="-125 10 0 0" Text="*" Foreground="Red"/>
+            </Grid>
+            <TextBox Padding="2" Margin="0 5 225 0"/>
+
+        </StackPanel>
     </Border>
 </Window>
