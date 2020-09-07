@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.SQLite;
 
 namespace WPFBasicsPractice
 {
@@ -25,11 +26,31 @@ namespace WPFBasicsPractice
             InitializeComponent();
         }
 
+        private bool checkFields()
+        {
+            string fullNameVar = fullName.Text;
+            string phoneVar = phoneNum.Text;
+            string dobVar = dob.Text;
+            string addNotesVar = addNotes.Text;
+
+            if (fullNameVar == "" || phoneVar == "" || dobVar == "")
+            {
+                return false;
+            }
+
+            return true;
+        }
         private void SubmitClickFunction(object sender, RoutedEventArgs e)
         {
             // now we can execute functions
-            MessageBox.Show(
-                "Successfully submitted the user.", "Title goes at the end");
+            if (checkFields() == false)
+            {
+                MessageBox.Show("Please input all required fields.", "Error");
+                return;
+            }
+            
+            // here is true, we can insert into local db
+            
         }
     }
 }
