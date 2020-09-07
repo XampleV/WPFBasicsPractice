@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFBasicsPractice"
         mc:Ignorable="d"
-        Title="C# Testing" Height="450" Width="400">
-    <Border Padding="10">
+        Title="C# Sqlite Database Test 2020" Height="450" Width="400">
+    <Border Padding="5" Background="Black">
     <StackPanel>
+        <!--
+        This was for testing
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -19,17 +21,50 @@
             <Button  Grid.Column="1"  Content="Reset"/>
             <Button Margin="10 0 0 0" Grid.Column="2"  Content="Refresh"/>
         </Grid>
-            <TextBlock Grid.Column="0" Margin ="0 10 0 0" FontWeight="Bold" FontSize="15" Foreground="Black" Text="Small Header" />
+        -->
+            <!--Title Section -->
+            <TextBlock  Grid.Column="0" HorizontalAlignment="Center" Margin ="0 10 0 0" FontWeight="Bold" FontSize="15" Foreground="White" Text="User Information" />
+            <!-- Full Name Section -->
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-            
-                <TextBlock Grid.Column="0" Margin ="0 10 0 0" Text="Full Name" />
-                <TextBlock Grid.Column="1" Margin="-125 10 0 0" Text="*" Foreground="Red"/>
+
+                <TextBlock Foreground ="White" Grid.Column="0" Margin ="0 10 0 0" Text="Full Name" />
+                <TextBlock Grid.Column="1" Margin="-130 10 0 0" Text="*" Foreground="Red"/>
             </Grid>
             <TextBox Padding="2" Margin="0 5 225 0"/>
+
+        <!-- Phone Number Section -->
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Foreground ="White" Grid.Column="0" Margin ="0 10 0 0" Text="Phone Number" />
+                <TextBlock Grid.Column="1" Margin="-105 10 0 0" Text="*" Foreground="Red"/>
+            </Grid>
+            <TextBox Margin="0 5 225 0"/>
+            <!-- D.O.B Section -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Foreground ="White" Grid.Column="0" Margin ="0 10 0 0" Text="D.O.B" />
+                <TextBlock Grid.Column="1" Margin="-155 10 0 0" Text="*" Foreground="Red"/>
+            </Grid>
+            <DatePicker Margin="0 5 225 0"/>
+            <!--Additional Notes Section -->
+            <TextBlock Foreground ="White" Grid.Column="0" Margin ="0 10 0 0" Text="Additional Notes" />
+            <TextBox Margin="0 5 225 0" Padding="10"/>
+            <!-- Submit Section -->
+
+            <Button Content="Submit"  FontSize="25" Margin="0 50 0 0" FontWeight="Bold" Foreground="#66ff00" Background="Black" BorderThickness="0"></Button>
 
         </StackPanel>
     </Border>
